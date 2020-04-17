@@ -1,0 +1,16 @@
+
+<mat-card>
+  <mat-card-title> {{article.title}}</mat-card-title>
+  <mat-card-content>{{article.text}}</mat-card-content>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Show picture
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <img mat-card-image src="{{article.imageSrc}}">
+  </mat-expansion-panel>
+
+</mat-card>
+
