@@ -1,0 +1,13 @@
+
+<div>
+  <h4> Select a category</h4>
+  <mat-nav-list *ngFor="let event of eventTypes">
+    <mat-list-item [routerLink]="['/photosByEvents', event]">
+      <i class="material-icons">drag_indicator</i>
+      {{event}}
+    </mat-list-item>
+  </mat-nav-list>
+</div>
+
+
+

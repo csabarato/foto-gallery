@@ -1,0 +1,9 @@
+
+<mat-grid-list cols="2" rowHeight="2:1">
+
+  <mat-grid-tile *ngFor="let photo of photos">
+      <app-gallery-element [routerLink]="['/photosByEvents',photo.eventType, photo.id]"
+       [photo]="photo"></app-gallery-element>
+  </mat-grid-tile>
+</mat-grid-list>
+

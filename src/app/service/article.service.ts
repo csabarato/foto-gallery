@@ -7,15 +7,13 @@ export class ArticleService {
    mountaneeringArticle: ArticleModel = {
     title: 'Mountaineering at the Himalayas',
     text: 'This is a picture, which I shot when I reached the Mt. Everest peak without oxygen support.',
-     date: null,
-     imageSrc: 'assets/sea.jpg'
+     imageSrc: 'assets/himalaya.jpg'
   };
 
   cyclingArticle: ArticleModel = {
-    title: 'Cycling',
+    title: 'Beach vibes',
     text: 'asd lol qwe',
-    date: null,
-    imageSrc: 'assets/sky.jpg'
+    imageSrc: 'assets/sea.jpg'
   };
 
   articles: ArticleModel[] = [this.mountaneeringArticle, this.cyclingArticle];

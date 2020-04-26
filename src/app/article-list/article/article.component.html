@@ -4,13 +4,12 @@
   <mat-card-content>{{article.text}}</mat-card-content>
 
   <mat-expansion-panel>
-    <mat-expansion-panel-header>
+    <mat-expansion-panel-header (click)="onShowPictureClick()">
       <mat-panel-title>
-        Show picture
+        {{imagePanelTitleText}}
       </mat-panel-title>
     </mat-expansion-panel-header>
     <img mat-card-image src="{{article.imageSrc}}">
   </mat-expansion-panel>
-
 </mat-card>
 

@@ -1,0 +1,14 @@
+.mat-list-item:hover {
+  background-color: #38a6ff;
+  border-radius: 30px;
+}
+
+.mat-nav-list {
+  width: 40%;
+}
+
+h4 {
+  font-size: 50px;
+  padding: 20px;
+  font-family: "Droid Serif";
+}

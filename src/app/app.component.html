@@ -1,14 +1,12 @@
 
 
-<div class="mat-tab-nav-bar" style="background-color: antiquewhite">
+<div class="mat-tab-nav-bar" style="background-color: antiquewhite; width: 100%">
 <button mat-button color="primary"  routerLink="/">Blog</button>
 <button mat-button routerLink="contact" color="primary">Contact</button>
-<button mat-button [matMenuTriggerFor]="galleryMenu" routerLink="photos" color="primary">Gallery</button>
+<button mat-button [matMenuTriggerFor]="galleryMenu" color="primary">Gallery</button>
 <mat-menu #galleryMenu="matMenu" xPosition="before">
-  <button mat-menu-item routerLink="photos"
-    [queryParams]="{galleryType: 'dates' }">Dates</button>
-  <button mat-menu-item routerLink="photos"
-  [queryParams]="{galleryType: 'categories' } ">Categories</button>
+  <button mat-menu-item routerLink="photosByDates">List by dates</button>
+  <button mat-menu-item routerLink="photosByEvents">List by events</button>
 </mat-menu>
 
 <button mat-button [matMenuTriggerFor]="uploadMenu" color="primary">Upload</button>
@@ -21,39 +19,3 @@
 <div>
   <router-outlet></router-outlet>
 </div>
-
-
-<!--<mat-menu #menu ="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span> Redial</span>
-  </button>
-
-  <button mat-menu-item disabled>
-    <mat-icon> voicemail</mat-icon>
-    <span> Check voicemail</span>
-  </button>
-
-</mat-menu>
-<h4> asdadasd</h4>-->
-
-<!--<div>
-<ul >
-  <li role="presentation" routerLinkActive="active"
-      [routerLinkActiveOptions]="{exact: true}" >
-    <a routerLink="/">Blog</a></li>
-
-  <li routerLinkActive="active" >
-    <a routerLink="/photos">Servers</a></li>
-
-  <li role="contact" routerLinkActive="active">
-    <a routerLink="/articles">Articles</a></li>
-</ul>
-
-<div>
-  <div>
-    <router-outlet></router-outlet>
-  </div>
-</div>
-
-</div>-->
