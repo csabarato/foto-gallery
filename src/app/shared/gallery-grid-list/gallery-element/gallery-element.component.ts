@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PhotoModel} from '../../model/photo.model';
+import {PhotoModel} from '../../../model/photo.model';
 
 @Component({
   selector: 'app-gallery-element',

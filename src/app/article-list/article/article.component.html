@@ -2,7 +2,7 @@
 <mat-card>
   <mat-card-title> {{article.title}}</mat-card-title>
   <mat-card-content>{{article.text}}</mat-card-content>
-
+  <mat-card-content> Date: {{article.date.toLocaleDateString()}}</mat-card-content>
   <mat-expansion-panel>
     <mat-expansion-panel-header (click)="onShowPictureClick()">
       <mat-panel-title>

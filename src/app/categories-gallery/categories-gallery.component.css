@@ -1,5 +1,6 @@
 .mat-list-item:hover {
-  background-color: #38a6ff;
+  background-color: rgba(0, 166, 77, 0.47);
+;
   border-radius: 30px;
 }
 

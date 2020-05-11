@@ -3,19 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 import {ContactComponent} from './contact/contact.component';
 import {ArticleListComponent} from './article-list/article-list.component';
 import {DatesGalleryComponent} from './dates-gallery/dates-gallery.component';
-import {EventsGalleryComponent} from './events-gallery/events-gallery.component';
-import {EventGalleryComponent} from './events-gallery/event-gallery/event-gallery.component';
+import {CategoriesGalleryComponent} from './categories-gallery/categories-gallery.component';
+import {GalleryGridListComponent} from './shared/gallery-grid-list/gallery-grid-list.component';
 import {PhotoPageComponent} from './photo-page/photo-page.component';
+import {UploadPhotosComponent} from './upload-photos/upload-photos.component';
 
 
 const routes: Routes = [
   { path: '', component: ArticleListComponent },
-  { path: 'photosByDates',  component: DatesGalleryComponent },
-  { path: 'photosByEvents', component: EventsGalleryComponent },
-  { path: 'photosByEvents/:event', component: EventGalleryComponent },
-  { path: 'photosByEvents/:event/:id', component: PhotoPageComponent},
+  { path: 'dates',  component: DatesGalleryComponent },
+  { path: 'categories', component: CategoriesGalleryComponent },
+  { path: 'categories/:event', component: GalleryGridListComponent },
+  { path: 'image/:id', component: PhotoPageComponent},
   { path: 'contact', component: ContactComponent },
-  { path: 'articles', component: ArticleListComponent }
+  { path: 'articles', component: ArticleListComponent},
+  { path: 'uploadPhotos', component: UploadPhotosComponent}
   ];
 
 @NgModule({

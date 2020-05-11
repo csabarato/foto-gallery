@@ -1,0 +1,12 @@
+mat-card {
+  margin: 50px;
+  border: 3px solid rgba(0, 166, 77, 0.47);;
+}
+
+mat-card-title, mat-card-subtitle, img {
+  padding: 30px;
+}
+
+mat-card-subtitle {
+  font-size: 20px;
+}

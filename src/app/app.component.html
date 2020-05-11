@@ -5,17 +5,18 @@
 <button mat-button routerLink="contact" color="primary">Contact</button>
 <button mat-button [matMenuTriggerFor]="galleryMenu" color="primary">Gallery</button>
 <mat-menu #galleryMenu="matMenu" xPosition="before">
-  <button mat-menu-item routerLink="photosByDates">List by dates</button>
-  <button mat-menu-item routerLink="photosByEvents">List by events</button>
+  <button mat-menu-item routerLink="dates">List by dates</button>
+  <button mat-menu-item routerLink="categories">List by categories</button>
 </mat-menu>
 
 <button mat-button [matMenuTriggerFor]="uploadMenu" color="primary">Upload</button>
 <mat-menu #uploadMenu="matMenu" xPosition="after">
-  <button mat-menu-item>Upload photos</button>
-  <button mat-menu-item>Upload videos</button>
+  <button mat-menu-item routerLink="uploadPhotos">Upload photos</button>
 </mat-menu>
 </div>
+
 
 <div>
   <router-outlet></router-outlet>
 </div>
+

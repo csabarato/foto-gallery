@@ -16,14 +16,19 @@ import {ArticleService} from './service/article.service';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { DatesGalleryComponent } from './dates-gallery/dates-gallery.component';
-import { EventsGalleryComponent } from './events-gallery/events-gallery.component';
+import { CategoriesGalleryComponent } from './categories-gallery/categories-gallery.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
-import { EventGalleryComponent } from './events-gallery/event-gallery/event-gallery.component';
-import { GalleryElementComponent } from './shared/gallery-element/gallery-element.component';
+import { GalleryGridListComponent } from './shared/gallery-grid-list/gallery-grid-list.component';
+import { GalleryElementComponent } from './shared/gallery-grid-list/gallery-element/gallery-element.component';
 import { PhotoPageComponent } from './photo-page/photo-page.component';
-import {MatDialogModule} from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldControl, MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
+import { UploadPhotosComponent } from './upload-photos/upload-photos.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +37,15 @@ import {MatTabsModule} from '@angular/material/tabs';
     ArticleComponent,
     ContactComponent,
     DatesGalleryComponent,
-    EventsGalleryComponent,
-    EventGalleryComponent,
+    CategoriesGalleryComponent,
+    GalleryGridListComponent,
     GalleryElementComponent,
-    PhotoPageComponent
+    PhotoPageComponent,
+    UploadPhotosComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -50,7 +57,13 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatExpansionModule,
     MatGridListModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule
+
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]

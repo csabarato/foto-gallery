@@ -1,4 +1,4 @@
-import {EventTypes} from '../shared/event.types';
+import {CategoriesEnum} from '../shared/categoriesEnum';
 
 export interface PhotoModel {
 
@@ -6,6 +6,6 @@ export interface PhotoModel {
   title: string;
   imageSrc: string;
   date: Date;
-  eventType: EventTypes;
+  category: CategoriesEnum;
 
 }

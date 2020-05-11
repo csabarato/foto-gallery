@@ -1,0 +1,13 @@
+
+<div>
+  <h4> Select a category</h4>
+  <mat-nav-list *ngFor="let category of categories">
+    <mat-list-item [routerLink]="['/categories', category]">
+      <i class="material-icons">{{icons[category]}}</i>
+      {{category}}
+    </mat-list-item>
+  </mat-nav-list>
+</div>
+
+
+

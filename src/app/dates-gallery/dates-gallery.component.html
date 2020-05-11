@@ -1,1 +1,26 @@
-<p>dates-gallery works!</p>
+
+<div>
+<mat-form-field>
+  <input matInput [matDatepicker]="fromPicker" [formControl]="fromDate">
+  <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+  <mat-datepicker #fromPicker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [matDatepicker]="toPicker" [formControl]="toDate">
+  <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+  <mat-datepicker #toPicker></mat-datepicker>
+</mat-form-field>
+  <button mat-stroked-button (click)="filterPicturesByDate()"> List pictures</button>
+</div>
+
+<div *ngIf="photos.length === 0" align="center" style="font-size: 25px; font-style: italic; color: cadetblue"> There is no pictures between the selected date </div>
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let photo of photos">
+    <app-gallery-element [routerLink]="['/image', photo.id]"
+                         [photo]="photo"></app-gallery-element>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
